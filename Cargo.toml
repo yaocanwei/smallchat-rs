@@ -1,0 +1,19 @@
+[package]
+name = "smallchat-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "A Rust port of antirez/smallchat, with a TCP server and terminal client"
+license = "BSD-3-Clause"
+default-run = "smallchat-server"
+
+[dependencies]
+libc = "0.2"
+
+[[bin]]
+name = "smallchat-server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "smallchat-client"
+path = "src/bin/client.rs"
